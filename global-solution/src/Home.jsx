@@ -15,7 +15,7 @@ import people_icon from '../assets/people_icon.svg'
 import rainIcon from '../assets/rain_icon.svg'
 import sunIcon from '../assets/sun_icon.svg'
 
-function Home() {
+function Home({ onNavigate, currentPage }) {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
@@ -35,6 +35,8 @@ function Home() {
                 <LateralMenu
                     menuOpen={menuOpen}
                     onClose={() => setMenuOpen(false)}
+                    onNavigate={onNavigate}
+                    currentPage={currentPage}
                 />
 
                 <div

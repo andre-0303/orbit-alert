@@ -65,18 +65,43 @@ body {
   align-items: center;
   gap: 12px;
   min-height: 44px;
+  width: 100%;
   padding: 10px 14px;
+  border: 0;
   border-radius: 8px;
+  background: transparent;
   color: #e8eef8;
   font-size: 16px;
   font-weight: 400;
+  text-align: left;
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .menu-item:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+
+.menu-item-active {
+  background: rgba(20, 156, 255, 0.15);
+  color: #149cff;
+}
+
+.menu-item-active:hover {
+  background: rgba(20, 156, 255, 0.22);
+  color: #149cff;
+}
+
+.menu-item-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.menu-item-disabled:hover {
+  background: transparent;
+  color: #e8eef8;
 }
 
 .menu-icon {

@@ -8,15 +8,22 @@ import sateliteIcon from '../assets/satelite_icon.svg'
 import notificationicon from '../assets/notification_icon.svg'
 import dashboardIcon from '../assets/dashboard_icon.svg'
 
-function LateralMenu({ menuOpen, onClose }) {
+function LateralMenu({ menuOpen, onClose, onNavigate, currentPage }) {
   const menuItems = [
-    { label: 'Dashboard', icon: dashboardIcon },
-    { label: 'Mapa de Risco', icon: localizationIcon },
-    { label: 'Alertas', icon: notificationicon },
-    { label: 'Previsoes', icon: sateliteIcon },
-    { label: 'Relatorios', icon: reportIcon },
-    { label: 'Configuracoes', icon: configIcon },
+    { label: 'Dashboard', icon: dashboardIcon, page: 'home' },
+    { label: 'Mapa de Risco', icon: localizationIcon, page: null },
+    { label: 'Alertas', icon: notificationicon, page: null },
+    { label: 'Previsões', icon: sateliteIcon, page: 'previsoes' },
+    { label: 'Relatórios', icon: reportIcon, page: null },
+    { label: 'Configurações', icon: configIcon, page: null },
   ]
+
+  const handleItemClick = (page) => {
+    if (page && onNavigate) {
+      onNavigate(page)
+      onClose()
+    }
+  }
 
   return (
     <>
@@ -30,12 +37,17 @@ function LateralMenu({ menuOpen, onClose }) {
 
         <nav className="menu">
           {menuItems.map((item) => (
-            <a href="#" className="menu-item" key={item.label}>
+            <button
+              type="button"
+              className={`menu-item${currentPage === item.page ? ' menu-item-active' : ''}${!item.page ? ' menu-item-disabled' : ''}`}
+              key={item.label}
+              onClick={() => handleItemClick(item.page)}
+            >
               <span className="menu-icon">
                 {item.icon && <img src={item.icon} alt="" />}
               </span>
               <span className="menu-text">{item.label}</span>
-            </a>
+            </button>
           ))}
         </nav>
       </aside>
