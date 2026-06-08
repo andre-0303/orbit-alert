@@ -1,16 +1,17 @@
-# 🌍 OrbitAlert
+<div align="center">
+  <img src="global-solution/assets/OrbitIcon.png" alt="Orbit Alert" width="120"/>
+  
+# OrbitAlert
 
 ### Plataforma Inteligente de Previsão e Resposta a Desastres Naturais com Dados Satelitais
 
-O **OrbitAlert** é uma plataforma desenvolvida para monitoramento, previsão e resposta a desastres naturais utilizando **dados satelitais em tempo real**, **inteligência artificial** e **visualização geográfica interativa**.
+O **OrbitAlert** é uma plataforma desenvolvida para monitoramento, previsão e resposta a desastres naturais utilizando **dados satelitais em tempo real**, **inteligência artificial** e **visualização geográfica interativa**. O projeto foi desenvolvido como parte do **Global Solution FIAP**, com o objetivo de criar soluções tecnológicas de impacto social, auxiliando governos e populações na prevenção de eventos climáticos extremos como: Enchentes, Deslizamentos de terra e secas severas.
 
-O projeto foi desenvolvido como parte do **Global Solution FIAP**, com o objetivo de criar soluções tecnológicas de impacto social, auxiliando governos e populações na prevenção de eventos climáticos extremos como:
-
-* 🌊 Enchentes
-* ⛰️ Deslizamentos de terra
-* ☀️ Secas severas
-
----
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![FIAP](https://img.shields.io/badge/FIAP-Global_Solution_2025-red?style=flat-square)
+</div>
 
 ## 📌 Sobre o Projeto
 
@@ -153,13 +154,15 @@ para tornar cidades mais preparadas diante de eventos extremos.
 
 ## 👨‍💻 Integrantes do Grupo
 
-**Turma: 1TDSOD**
+Desenvolvido por estudantes de **Análise e Desenvolvimento de Sistemas** na **FIAP**:
 
-* Guilherme
-* André
-* Sara
-* Yohana
-* Daniel
+| Nome | RM |
+|------|----|
+| Marcos Guilherme | 573771 |
+| André Bandeira  | 572044 |
+| Yohana Amorim | 573919 |
+| Sara Fernandes | 573660 |
+| Daniel Souza | 573209 |
 
 ---
 
