@@ -11,7 +11,7 @@ import dashboardIcon from '../assets/dashboard_icon.svg'
 function LateralMenu({ menuOpen, onClose, onNavigate, currentPage }) {
   const menuItems = [
     { label: 'Dashboard', icon: dashboardIcon, page: 'home' },
-    { label: 'Mapa de Risco', icon: localizationIcon, page: null },
+    { label: 'Mapa de Risco', icon: localizationIcon, page: 'mapa-risco' },
     { label: 'Alertas', icon: notificationicon, page: null },
     { label: 'Previsões', icon: sateliteIcon, page: 'previsoes' },
     { label: 'Relatórios', icon: reportIcon, page: null },
