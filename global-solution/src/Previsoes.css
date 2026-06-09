@@ -465,7 +465,9 @@
   }
 
   .prev-prob-card,
-  .prev-regions-card {
+  .prev-regions-card,
+  .prev-map-card,
+  .prev-factors-card {
     flex: unset;
     width: 100%;
   }
@@ -589,6 +591,47 @@
 
   .prev-card {
     padding: 18px 16px;
+  }
+}
+
+/* ── 480px: mobile ── */
+@media (max-width: 480px) {
+  .prev-header-left {
+    gap: 10px;
+  }
+
+  .prev-row-top,
+  .prev-row-bottom {
+    gap: 14px;
+  }
+
+  .prev-region-row {
+    grid-template-columns: 28px 1fr 56px 28px;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .prev-factors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .prev-factor-item {
+    padding: 12px 6px;
+  }
+
+  .prev-factor-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .prev-map-stats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .prev-map-stat-sep {
+    display: none;
   }
 }
 

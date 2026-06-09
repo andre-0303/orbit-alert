@@ -6,32 +6,32 @@
   font-family: 'Inter', sans-serif;
 }
 
-.home-header{
-    gap: 60px;
-    align-items: center;
-    width: 100%;
-    display: flex;
+.home-header {
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  display: flex;
 }
 
-.card-content{
-    align-items: center;
-    height: 20vh;
-    min-width: 60%;
-    display: flex;
-    justify-content: space-around;
-
+.card-content {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
 }
-.card{
-    gap: 12px;
-    padding: 20px;
-    align-items: center;
-    display: flex;
-    font-size: 11px;
-    background: #0C1934;
-    min-width: 18%;
-    height: 100px;
-    border-radius: 8px;
-
+.card {
+  gap: 12px;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  font-size: 11px;
+  background: #0C1934;
+  flex: 1 1 180px;
+  min-width: 0;
+  height: 100px;
+  border-radius: 8px;
 }
 
 .icon-card-satelite,
@@ -97,9 +97,9 @@
 
 .map-placeholder {
   display: flex;
-  width: 50%;
-  height: 60%;
-  margin-left: 30px;
+  flex: 1 1 300px;
+  min-width: 0;
+  height: auto;
 }
 
 .map-placeholder img {
@@ -116,8 +116,8 @@
 }
 
 .map-info {
-  height: 60vh;
-  min-width: 20%;
+  flex: 0 0 280px;
+  min-width: 0;
   padding: 22px;
   border-radius: 8px;
   background: #0b1b35;
@@ -227,14 +227,9 @@
   background: #0b63e5;
 }
 
-.footer-cards {
-  margin-top: 28px;
-}
-
 .forecast-card {
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 500px;
+  flex: 1;
+  min-width: 0;
   padding: 24px 32px;
   border-radius: 12px;
   background: #0b1b35;
@@ -319,14 +314,14 @@
 
 .footer-cards {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin-top: 28px;
+  align-items: stretch;
 }
 
 .realtime-card {
-  margin-top: 30px;
-  height: 23vh;
-  width: 500px;
+  flex: 1;
+  min-width: 0;
   padding: 24px 32px;
   border-radius: 12px;
   background: #0b1b35;
@@ -392,12 +387,53 @@
   color: #e7edf7;
 }
 
-@media (max-width: 900px) {
+/* ── 1024px: desktop estreito ── */
+@media (max-width: 1024px) {
+  .card {
+    padding: 16px;
+  }
+
+  .map-info {
+    flex: 0 0 240px;
+  }
+}
+
+/* ── 768px: tablet ── */
+@media (max-width: 768px) {
+  .home {
+    padding: 16px 16px 20px;
+  }
+
+  .card-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    flex: unset;
+    height: auto;
+    min-height: 90px;
+  }
+
+  .map-content {
+    flex-direction: column;
+  }
+
+  .map-placeholder {
+    flex: unset;
+    width: 100%;
+  }
+
+  .map-info {
+    flex: unset;
+    width: 100%;
+  }
+
   .footer-cards {
     flex-direction: column;
   }
 
-  .realtime-card {
+  .integracao-nativa {
     width: 100%;
   }
 
@@ -406,19 +442,117 @@
   }
 }
 
+/* ── 480px: mobile ── */
+@media (max-width: 480px) {
+  .home {
+    padding: 12px 12px 16px;
+  }
+
+  .home-header {
+    gap: 12px;
+  }
+
+  .welcome-message h1 {
+    font-size: 20px;
+  }
+
+  .welcome-message p {
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 14px;
+    min-height: 80px;
+    font-size: 10px;
+  }
+
+  .icon-card-satelite,
+  .icon-card-areas,
+  .icon-card-alertas,
+  .icon-card-pessoas {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .forecast-card,
+  .realtime-card {
+    padding: 18px 18px;
+  }
+
+  .forecast-list {
+    gap: 12px;
+  }
+
+  .forecast-item {
+    min-width: 80px;
+  }
+
+  .realtime-list {
+    gap: 14px;
+  }
+
+  .realtime-header p {
+    font-size: 13px;
+  }
+
+  .integracao-nativa {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+
+  .integracao-image img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .map-button {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .alert-item {
+    gap: 8px;
+    padding: 10px 0;
+  }
+}
+
 
 .integracao-nativa {
-  width: 20%;
-  margin-top: 30px;
-  height: 23vh;
+  width: 220px;
+  flex-shrink: 0;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
   background: #0b1b35;
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  padding: 24px 20px;
 }
 
-.integracao-text{
-  width: 30%;
+.integracao-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.integracao-text h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.integracao-text p {
+  margin: 0;
+  font-size: 13px;
+  color: #c8d4e8;
+  line-height: 1.4;
+}
+
+.integracao-image {
+  flex-shrink: 0;
+}
+
+.integracao-image img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
