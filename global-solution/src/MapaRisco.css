@@ -1,0 +1,144 @@
+.risk-map-container {
+  background: #02112C;
+  min-height: 100vh;
+  padding: 20px 24px 24px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.risk-map-message-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.risk-map-header {
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+  display: flex;
+}
+
+.risk-map-message {
+  width: 90%;
+  margin-top: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+}
+
+.risk-map-message p {
+  padding: 0px;
+  margin: 0px;
+}
+.risk-map-message h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: #172338;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.hamburger-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.risk-map-filters {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter-button {
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid #52627d;
+  border-radius: 8px;
+  background: #061734;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-button:hover {
+  background: #0b2145;
+  border-color: #70819d;
+}
+
+.filter-icon {
+  font-size: 14px;
+  line-height: 1;
+  color: #d9e2f1;
+}
+
+.filter-arrow {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #d9e2f1;
+}
+
+.risk-map-filters-container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  width: 100%;
+}
+
+.risk-map-content-map {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.risk-map-content-map img{
+  width: 90%;
+}
+
+.notification-and-export {
+  margin-right: 90px;
+  margin-top: 40px;
+  gap: 70px;
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  width: 80%;
+}
+
+.export-button{
+  display: flex;gap: 14px;
+justify-content: center;
+align-items: center;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+  background: #035FDD;
+}
